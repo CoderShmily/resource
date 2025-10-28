@@ -1,0 +1,185 @@
+获取手机号
+https://trade.dmtz.com.cn/risk/type/get?memberId=21111817352425501&targetId=房间id
+{
+    "success": true,
+    "msg": "处理成功",
+    "data": {
+        "id": "21111817374528768",
+        "memberId": "21111817352425501",
+        "email": null,
+        "mobile": "13989335969",
+        "riskUserId": "21111817360787358",
+        "riskType": "POSITIVE",
+        "riskTypeName": "积极型",
+        "memo": null,
+        "createTime": "2021年11月18日 17:37:45",
+        "updateTime": "2021年11月18日 17:37:45"
+    }
+}
+
+
+
+用手机号获取spuid和memberid  https://live.azavt.com/chatroom/new/login
+POST 请求参数{"mobile":"13710266118"}
+{
+    "success": true,
+    "msg": "处理成功",
+    "data": {
+        "memberId": "21112415282608361",
+        "memberName": "快乐的神仙13710266118",
+        "isAudit": "F",
+        "spuId": null,
+        "skuId": null,
+        "studioList": [
+            {
+                "name": "沙哥训练营1",
+                "logo": "https://scan-img.dmtz.com.cn/studio/lsh.png",
+                "spuId": "610654841599234048"
+            },
+            {
+                "name": "沙哥训练营2",
+                "logo": "https://scan-img.dmtz.com.cn/studio/858292740056592384.png",
+                "spuId": "858292740056592384"
+            },
+            {
+                "name": "风口量化",
+                "logo": "https: //scan-img.dmtz.com.cn/studio/fklh.png",
+                "spuId": "762860628859490304"
+            }
+        ],
+        "singerStudio": false,
+        "bindingWeChat": true
+    }
+}
+
+用spuid和memberid获取chatroomid 过期时间 系统课程id POST https://live.azavt.com/chatroom/new/studioInfo
+post参数{"memberId":20122319320065098,"spuId":858292740056592384}
+{"success":true,"msg":"处理成功","data":{"tabs":[1,3],"chatRoomId":"135582562975745","riskChatRoomId":"136926619303937","zbId":null,"kcId":"267174666","zlId":null,"isManager":false,"skuId":"610654910641672192","spuId":"610654841599234048","expireDate":"2023-05-07 10:06:29","isShow":false,"memberName":"泰迪熊","isAudit":"F","memberId":"21070913472947738"}}
+
+免登陆 不用用户id的只看历史记录
+https://live.azavt.com/chatroom/historyMsgPage?isManager=&orderby=SEND_TIMESTAMP~ASC&pageNum=1&day=20221108&pageSize=20&chatRoomId=135582562975745
+新版历史记录
+https://live.azavt.com/chatroom/v2/historyMsgPage?isManager=&orderby=SEND_TIMESTAMP~ASC&pageNum=1&day=20221108&pageSize=20&chatRoomId=135582562975745
+新版当前房间消息
+https://live.azavt.com/chatroom/v2/msgPage post参数{"chatRoomId":"135582562975745","pageNum":36,"pageSize":20,"orderby":"SEND_TIMESTAMP~ASC","isManager":"","fromMemberId":null,"riskChat":""}
+// onlyManager=true 只看老师 去掉就是所有消息
+wss://indechatserver.azavt.com/?identity=22031706031895542&memberName=%E9%AD%94%E6%B3%95%E5%86%B0%E5%84%BF&groupId=135582562975745&onlyManager=true&clientType=H5&embedded=false
+
+PC网页版带翻页的
+https://live.azavt.com/bweb/pchistory?memberId=21070913472947738&skuId=610654910641672192&day=20221108
+
+订单地址 
+https://order.dmtz.com.cn/order?spuId=635078990617001984&isShow=false
+sku信息1
+https://trade.dmtz.com.cn/product/sku/findSkusBySpuId?spuId=635078990617001984
+sku信息2
+https://trade.azavt.com/product/sku/findSkusBySpuId?spuId=784989714320187392
+
+获取文件列表 https://live.azavt.com/chatroom/file/list?chatRoomId=135582562975745
+文件下载链接 https://live.azavt.com/chatroom/file/download?fileId=id
+个人信息 https://live.azavt.com/chatroom/loadInitByMemberId?memberId=21070913472947738&skuId=610654910641672192
+
+PC端调试
+https://live.azavt.com/bweb/pcchatroom?memberId=22031706031895542&skuId=610654910641672192&tab=1&isShowHeader=true
+
+本地替换报错数据  获取用户信息
+https://live.azavt.com/chatroom/loadInitByMemberId?memberId=22031706031895542&skuId=610654910641672192
+{
+  "success": true,
+  "msg": "处理成功",
+  "data": {
+    "password": "huanxin22031706031895542",
+    "isAudit": "F",
+    "chatRoomId": "135582562975745",
+    "tabs": [
+      1
+    ],
+    "memberName": "魔法冰儿",
+    "isManager": false,
+    "spuId": "610654841599234048",
+    "expireDate": "2022-11-14 17:25:53",
+    "userName": "魔法冰儿",
+    "skuId": "610654910641672192",
+    "memberId": "22031706031895542"
+  }
+}
+
+
+//系统课sku的productSrcId
+https://live.azavt.com/zhibo/loadSysCourseList?pageNum=1&memberId=21112317164683547&pageSize=20&subjectId=885606012
+
+{"success":true,"msg":"处理成功","data":{"total":4,"list":[{"start_time":"2021-11-29","thumb":"http://cnstatic01.e.vhall.com/upload/webinars/img_url/cf/8a/cf8a130002780e439c498a2cd542b2fe.jpg","webinar_id":901461395,"subject":"如何辨别趋势","isLastWatch":"F","desc":"","status":4},{"start_time":"2021-12-03","thumb":"http://cnstatic01.e.vhall.com/upload/webinars/img_url/f2/08/f208b9c256f6df5981bb5eb82b7b17e5.jpg","webinar_id":703752811,"subject":"重要的买点","isLastWatch":"F","desc":"","status":4},{"start_time":"2021-12-26","thumb":"http://cnstatic01.e.vhall.com/upload/webinars/img_url/2a/ba/2abafe663e806d7ed4adaf8b47cbf68e.jpg","webinar_id":642081556,"subject":"支撑与压力","isLastWatch":"F","desc":"","status":4},{"start_time":"2022-01-10","thumb":"http://cnstatic01.e.vhall.com/upload/webinars/img_url/a3/bd/a3bd99ad777a1de33ebf36cb294e3a15.jpg","webinar_id":951754609,"subject":"止盈","isLastWatch":"T","desc":"","status":4}],"pageNum":1,"pageSize":4,"size":4,"startRow":0,"endRow":3,"pages":1,"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":4,"navigatepageNums":[1],"navigateFirstPage":1,"navigateLastPage":1}}
+
+//webinar_id
+https://live.azavt.com/zhibo/loadRecordList?pageNum=1&pageSize=20&zhiboId=951754609
+{"success":true,"msg":"处理成功","data":{"total":1,"list":[{"id":3288310,"subject":"1641782238_364_1.mp4","create_time":"2022-01-10","url":"http://e.vhall.com/webinar/record/3288310","webinar_id":951754609,"duration":7150,"webinar_subject":"止盈","status":1,"is_default":1}],"pageNum":1,"pageSize":1,"size":1,"startRow":0,"endRow":0,"pages":1,"prePage":0,"nextPage":0,"isFirstPage":true,"isLastPage":true,"hasPreviousPage":false,"hasNextPage":false,"navigatePages":1,"navigatepageNums":[1],"navigateFirstPage":1,"navigateLastPage":1}}
+
+//url播放 
+http://e.vhall.com/webinar/record/3288310
+//重定向地址 zhiboId=951754609 id=3288310
+https://live.vhall.com/room/watch/951754609?rid=3288310
+
+//POST   spuid  全新极速炮
+https://live.azavt.com/chatroom/file/list?chatRoomId=791462331793268736&order=true
+ {
+            "id": "801241739574370304",
+            "name": "六月2日尾盘思路.pdf",
+            "extension": "pdf",
+            "chatroomId": "791462331793268736",
+            "createTime": "2022年06月02日 11:11:53",
+            "fileName": "801241739574370304.pdf"
+}
+https://live.azavt.com/chatroom/file/download?fileId=801241739574370304
+https://live.azavt.com/chatroom/file/preview?fileId=801241739574370304
+
+
+
+直播 获取zhiboId
+getVideoInfo+"?memberId="+this.$route.query.memberId+"&skuId="+this.$route.query.skuId)
+https://live.azavt.com/zhibo/loadInitByMemberId?memberId=22031616102567454&skuId=788642485279907840
+{"success":true,"msg":"处理成功","data":{"date":"2022-06-12","zhiboStatus":3,"zhiboId":"604686583","tabs":[1,2],"memberName":"老师","isManager":true,"expireDate":"","vhallUserId":"162208185","skuId":"788642485279907840","subjectId":"","productName":"主升浪直播","memberId":"20111112002120099"}}
+获取直播列表
+getLiveVideoList+"?pageNum="+this.pageNum+"&pageSize="+this.pageSize+"&zhiboId="+this.zhiboId
+getLiveVideoList:"https://live.azavt.com/zhibo/loadRecordList
+https://live.azavt.com/zhibo/loadRecordList?pageNum=1&pageSize=20&zhiboId=604686583
+
+
+getUserInfo:" https://live.azavt.com/chatroom/loadInitByMemberId",
+getVideoInfo:"https://live.azavt.com/zhibo/loadInitByMemberId",
+getHistoryDay:" https://live.azavt.com/chatroom/historyDays",
+getHistoryMsgList:" https://live.azavt.com/chatroom/historyMsgPage",
+postLastLookMovies:"https://live.azavt.com/zhibo/changeSysWatchHistory",
+recallMsg:" https://live.azavt.com/chatroom/recall",
+lookNotice:" https://live.azavt.com/chatroom/notice/findNoticeByRoomId",
+saveNotice:" https://live.azavt.com/chatroom/notice/saveOrUpdate",
+getQuestion:" https://live.azavt.com/chatroom/ask/findAllAskByDay",
+saveQuestion:" https://live.azavt.com/chatroom/ask/save",
+getBlockList:" https://live.azavt.com/chatroom/blockList",
+getMuteList:" https://live.azavt.com/chatroom/muteList",
+createLive:"https://live.azavt.com/zhibo/loadZhiboStart",
+pushMsg:" https://live.azavt.com/chatroom/sse/connect",
+pushAskMsg:" https://live.azavt.com/chatroom/sse/pushAskMsg",
+riskType:"https://trade.dmtz.com.cn/risk/type/get",
+getMuteStatus:" https://live.azavt.com/chatroom/getMuteStatus?chatroomId=",
+pusMsg:" https://live.azavt.com/chatroom/push",
+checkTab:" https://live.azavt.com/chatroom/checkTab",
+blocks:" https://live.azavt.com/chatroom/blocks",
+mute:" https://live.azavt.com/chatroom/mute",
+saveMsg:" https://live.azavt.com/chatroom/saveMsg",
+setMute:" https://live.azavt.com/chatroom/setMute",
+msgTop:" https://live.azavt.com/chatroom/msgTop",
+getTopMsg:" https://live.azavt.com/chatroom/getTopMsg",
+wsUrl:"wss://indechatserver.azavt.com",
+queryUserStatus:" https://live.azavt.com/chatroom/queryUserStatus",
+download:" https://live.azavt.com/chatroom/file/download",
+preview:" https://live.azavt.com/chatroom/file/preview",
+fileList:" https://live.azavt.com/chatroom/file/list",
+fileRemove:" https://live.azavt.com/chatroom/file/remove",
+fileUpload:" https://live.azavt.com/chatroom/file/upload",
+msgPage:" https://live.azavt.com/chatroom/msgPage",
+checkLogin:" https://live.azavt.com/chatroom/checkLogin?memberId=",
+refreshCookie:"https://live.azavt.com/ucenter/refreshCookie",
+sendMsg:"https://live.azavt.com/chatroom/chat/msg/sendMsg",
+changeUserPageNum:"https://live.azavt.com/chatroom/action/changeUserPageNum"
+renew:"https://live.azavt.com/chatroom/renew",
+courseList:"https://live.azavt.com/chatroom/course/list

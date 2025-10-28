@@ -1,0 +1,30 @@
+[
+    {
+        "pointNames": "老师",
+        "specialNames": "老师",
+        "onlyShowPointName": 0,
+        "onlyShowTeacher": 1,
+        "currentPage": "1",
+        "autoLoading": 0,
+        "showHeadIcon": 1,
+        "currentSkuId": "655595630316797952",
+        "spuId": "655594356162469888",
+        "chatRoomId": "146817097465859",
+        "className": "天使调研课程",
+    },
+    {
+        "pointNames":"老师",
+        "specialNames":"老师",
+        "onlyShowPointName":0,
+        "onlyShowTeacher":1,
+        "currentPage":"1",
+        "autoLoading":0,
+        "showHeadIcon":1,
+        "currentSkuId":"612475485466521600",
+        "spuId":"612474630977757184",
+        "chatRoomId":"136037410078721",
+        "className":"长风研报社",
+        "currentMemberId":"22030622082232149",
+        "currentMemberName":"张南方",
+    }
+  ]
